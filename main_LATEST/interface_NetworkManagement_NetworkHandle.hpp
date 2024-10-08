@@ -20,6 +20,16 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class interface_NetworkManagement_NetworkHandle{
+   public:
+      virtual void GetNetworkRequestedState                      (void) = 0;
+      virtual void GetNetworkState                               (void) = 0;
+      virtual void RegisterNetworkRequestedStateChangeNotifier   (void) = 0;
+      virtual void RegisterNetworkStateChangeNotifier            (void) = 0;
+      virtual void SetNetworkRequestedState                      (void) = 0;
+      virtual void UnregisterNetworkRequestedStateChangeNotifier (void) = 0;
+      virtual void UnregisterNetworkStateChangeNotifier          (void) = 0;
+};
 
 /******************************************************************************/
 /* CONSTS                                                                     */
